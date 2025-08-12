@@ -1,33 +1,52 @@
-# Quick Start Guide
+# Quick Start
 
-## Basic Usage
+Get up and running with FlowMaster in 5 minutes!
+
+## Basic Example
 
 ```python
-from langgraph_orchestrator import core
+from flowmaster import FlowMaster
 
-# Initialize
-system = core.System()
+# Create an instance
+engine = FlowMaster()
 
 # Process data
-result = system.process(your_data)
+result = engine.process("Hello, World!")
+print(result)
 ```
 
-## Common Use Cases
-
-### Use Case 1: Basic Processing
+## Configuration
 
 ```python
-# Example code here
+from flowmaster import FlowMaster, Config
+
+# Custom configuration
+config = Config(
+    verbose=True,
+    max_workers=4,
+    timeout=30
+)
+
+engine = FlowMaster(config=config)
 ```
 
-### Use Case 2: Advanced Features
+## Advanced Usage
 
 ```python
-# Example code here
+# Async processing
+import asyncio
+from flowmaster import AsyncFlowMaster
+
+async def main():
+    engine = AsyncFlowMaster()
+    result = await engine.process_async(data)
+    return result
+
+asyncio.run(main())
 ```
 
-## Next Steps
+## What's Next?
 
-- [Read the full user guide](../guide/basic-usage.md)
-- [Explore API documentation](../api/core.md)
-- [See more examples](../examples/basic.md)
+- [User Guide](../guide/overview.md) - Comprehensive usage guide
+- [API Reference](../api/core.md) - Detailed API documentation
+- [Examples](../examples/basic.md) - More code examples

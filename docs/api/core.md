@@ -1,3 +1,6 @@
 # Core API Reference
 
-::: langgraph_orchestrator.core
+::: flowmaster.core
+    options:
+      show_source: true
+      show_bases: true
