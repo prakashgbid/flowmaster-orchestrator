@@ -6,7 +6,7 @@ import asyncio
 from unittest.mock import Mock, AsyncMock, patch
 from datetime import datetime
 
-from langgraph_orchestrator import (
+from memcore import (
     AgentOrchestrator,
     AgentProfile,
     AgentType,
@@ -199,8 +199,8 @@ class TestSingletonPattern:
     def test_singleton_with_config(self):
         """Test singleton with configuration"""
         # Reset global instance
-        import langgraph_orchestrator.orchestrator
-        langgraph_orchestrator.orchestrator._orchestrator = None
+        import memcore.orchestrator
+        memcore.orchestrator._orchestrator = None
         
         config = {"max_handoffs": 20}
         orchestrator = get_agent_orchestrator(config=config)

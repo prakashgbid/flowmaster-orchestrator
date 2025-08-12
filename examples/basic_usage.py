@@ -4,7 +4,7 @@ Basic usage examples for LangGraph Orchestrator
 """
 
 import asyncio
-from langgraph_orchestrator import (
+from memcore import (
     AgentOrchestrator,
     AgentProfile,
     AgentType,

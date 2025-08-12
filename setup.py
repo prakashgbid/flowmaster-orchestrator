@@ -1,4 +1,4 @@
-"""Setup configuration for langgraph-orchestrator."""
+"""Setup configuration for FlowMaster."""
 
 from setuptools import setup, find_packages
 
@@ -6,14 +6,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="langgraph-orchestrator",
+    name="flowmaster",
     version="1.0.0",
-    author="OSA Contributors",
-    author_email="osa@omnimind.ai",
-    description="Production-ready multi-agent orchestration using LangGraph",
+    author="FlowMaster Contributors",
+    author_email="hello@flowmaster.ai",
+    description="Advanced workflow orchestration and agent coordination platform",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/prakashgbid/langgraph-orchestrator",
+    url="https://github.com/prakashgbid/flowmaster-orchestrator",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
@@ -43,13 +43,13 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "langgraph-orchestrator=langgraph_orchestrator.cli:main",
+            "flowmaster=flowmaster.cli:main",
         ],
     },
     keywords="agents orchestration langgraph langchain multi-agent supervisor swarm",
     project_urls={
-        "Bug Reports": "https://github.com/prakashgbid/langgraph-orchestrator/issues",
-        "Source": "https://github.com/prakashgbid/langgraph-orchestrator",
-        "Documentation": "https://langgraph-orchestrator.readthedocs.io",
+        "Bug Reports": "https://github.com/prakashgbid/flowmaster-orchestrator/issues",
+        "Source": "https://github.com/prakashgbid/flowmaster-orchestrator",
+        "Documentation": "https://flowmaster-orchestrator.readthedocs.io",
     },
 )
